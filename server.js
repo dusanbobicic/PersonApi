@@ -8,9 +8,13 @@ const path = require("path");
 const DATA='persons.json';
 const STATUS_OK=200;
 
+
+
+var publicDir = path.join(__dirname,'/public');
+app.use(express.static(publicDir));
 app.use(bodyParser.json());
 const upload = multer({
-  dest: "/src/assets"
+  dest: "/public/images"
   // you might also want to set some limits: https://github.com/expressjs/multer#limits
 });
 
@@ -42,7 +46,7 @@ app.listen(3000, () => {
     upload.single("image" /* name attribute of <file> element in your form */),
     (req, res) => {
       const tempPath = req.file.path;
-      const targetPath = path.join(__dirname, "../REALMED/src/assets/"+req.file.originalname);
+      const targetPath = path.join(__dirname, "public/images/"+req.file.originalname);
   
       if (path.extname(req.file.originalname).toLowerCase() === ".jpg") {
         fs.rename(tempPath, targetPath, err => {
@@ -93,3 +97,5 @@ app.listen(3000, () => {
     } );
     res.status(STATUS_OK).send(JSON.stringify(value));
   });
+
+

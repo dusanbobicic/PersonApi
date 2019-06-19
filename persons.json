@@ -4,25 +4,31 @@
    "id": 0,
    "name": "Bobicic Dusan",
    "age": 21,
-   "image": "/assets/bobi.jpg"
+   "image": "/images/bobi.jpg"
   },
   {
    "id": 1,
    "name": "Gvozdenovic Milos",
    "age": 21,
-   "image": "/assets/gvole.jpg"
+   "image": "/images/gvole.jpg"
   },
   {
    "id": 2,
    "name": "Jovanovski Anisia",
    "age": 22,
-   "image": "/assets/anisia.jpg"
+   "image": "/images/anisia.jpg"
   },
   {
    "id": 3,
+   "name": "Drazen Draskovic",
+   "age": 29,
+   "image": "/images/drazend.jpg"
+  },
+  {
+   "id": 4,
    "name": "Mihajlo Starcevic",
-   "age": 54,
-   "image": "/assets/miki.jpg"
+   "age": 69,
+   "image": "/images/miki.jpg"
   }
  ]
 }
